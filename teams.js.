@@ -1,0 +1,29 @@
+
+const teams = [
+  { name: "Villarreal", attack: 85, defense: 78 },
+  { name: "Celta Vigo", attack: 79, defense: 75 },
+  { name: "Real Madrid", attack: 94, defense: 91 },
+  { name: "Barcelona", attack: 93, defense: 86 },
+  { name: "Atletico Madrid", attack: 85, defense: 91 },
+  { name: "Sevilla", attack: 80, defense: 79 },
+  { name: "Manchester City", attack: 96, defense: 91 },
+  { name: "Liverpool", attack: 93, defense: 87 },
+  { name: "Arsenal", attack: 91, defense: 88 },
+  { name: "Chelsea", attack: 85, defense: 82 },
+  { name: "Manchester United", attack: 83, defense: 80 },
+  { name: "Tottenham", attack: 86, defense: 77 },
+  { name: "Bayern Munich", attack: 95, defense: 89 },
+  { name: "Borussia Dortmund", attack: 88, defense: 81 },
+  { name: "PSG", attack: 94, defense: 84 },
+  { name: "Marseille", attack: 83, defense: 79 },
+  { name: "Inter Milan", attack: 90, defense: 91 },
+  { name: "AC Milan", attack: 87, defense: 86 },
+  { name: "Juventus", attack: 85, defense: 90 },
+  { name: "Roma", attack: 84, defense: 85 }
+];
+
+function getTeam(name) {
+  return teams.find(
+    team => team.name.toLowerCase() === name.toLowerCase()
+  );
+}
