@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b16">
+  <title>FIFA 3x3 Simulator AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>⚽ FIFA 3x3 AI</h1>
+  <p>SIMULATOR + PREDICTOR</p>
+</header>
+
+<nav class="navigation">
+  <button onclick="showTab('home')">Accueil</button>
+  <button onclick="showTab('manual')">Saisie</button>
+  <button onclick="showTab('simulation')">Simulation</button>
+  <button onclick="showTab('prediction')">Prédictions</button>
+</nav>
+
+<main>
+  <section id="home" class="tab active">
+    <h2>Tableau de bord</h2>
+    <div class="stats">
+      <div class="card">
+        <h3 id="totalMatches">0</h3>
+        <p>Matchs enregistrés</p>
+      </div>
+      <div class="card">
+        <h3 id="totalTeams">20</h3>
+        <p>Équipes</p>
+      </div>
+    </div>
+    <h2>Derniers résultats</h2>
+    <div id="history">Aucun match enregistré.</div>
+  </section>
+
+  <section id="manual" class="tab">
+    <h2>Saisie manuelle</h2>
+    <label>Équipe 1</label>
+    <input id="team1" placeholder="Ex: Villarreal">
+    <label>Équipe 2</label>
+    <input id="team2" placeholder="Ex: Celta">
+    <label>Buts équipe 1</label>
+    <input id="goals1" type="number" min="0" placeholder="0">
+    <label>Buts équipe 2</label>
+    <input id="goals2" type="number" min="0" placeholder="0">
+    <button onclick="saveMatch()">Enregistrer le résultat</button>
+  </section>
+
+  <section id="simulation" class="tab">
+    <h2>Match automatique</h2>
+    <p>Génère un match virtuel entre deux équipes.</p>
+    <button onclick="simulateMatch()">Lancer une simulation</button>
+    <div id="simulationResult"></div>
+  </section>
+
+  <section id="prediction" class="tab">
+    <h2>FIFA Predictor AI</h2>
+    <label>Équipe domicile</label>
+    <input id="predictTeam1" placeholder="Villarreal">
+    <label>Équipe extérieure</label>
+    <input id="predictTeam2" placeholder="Celta">
+    <button onclick="predictMatch()">Lancer analyse IA</button>
+    <div id="predictionResult"></div>
+  </section>
+</main>
+
+<footer>
+  FIFA 3x3 AI — Version 1.0
+</footer>
+
+<script src="teams.js"></script>
+<script src="database.js"></script>
+<script src="simulator.js"></script>
+<script src="predictor.js"></script>
+
+</body>
+</html>
