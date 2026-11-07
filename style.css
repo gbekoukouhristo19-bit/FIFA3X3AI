@@ -1,0 +1,131 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #071b16;
+  color: white;
+}
+
+.header {
+  background: #103d2c;
+  text-align: center;
+  padding: 25px 10px;
+  border-bottom: 2px solid #24d17e;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 27px;
+  color: #42f59b;
+}
+
+.header p {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 12px;
+  background: #10271f;
+}
+
+button {
+  background: #16a765;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 13px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.97);
+}
+
+main {
+  padding: 15px;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+h2 {
+  color: #45e99a;
+  font-size: 20px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.card {
+  background: #12392b;
+  border: 1px solid #237b53;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card h3 {
+  color: #43f59a;
+  font-size: 28px;
+  margin: 5px;
+}
+
+.card p {
+  font-size: 12px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  color: #b6e8ce;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid #287c55;
+  background: #102b20;
+  color: white;
+  font-size: 16px;
+}
+
+section > button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+#history, #simulationResult, #predictionResult {
+  background: #102b20;
+  border: 1px solid #287c55;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #8eb9a2;
+  font-size: 12px;
+}
